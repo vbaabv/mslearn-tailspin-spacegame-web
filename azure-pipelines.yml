@@ -2,9 +2,9 @@ trigger:
 - '*'
 
 pool:
-  vmImage: 'ubuntu-16.04'
+  name: 'MyAgentPool'
   demands:
-    - npm
+  - npm
 
 variables:
   buildConfiguration: 'Release'
@@ -18,7 +18,7 @@ steps:
     version: '$(dotnetSdkVersion)'
 
 - task: Npm@1
-  displayName: 'Run npm install'
+  displayName: 'Run npm installl'
   inputs:
     verbose: false
 
